@@ -79,6 +79,27 @@ Creating logs are easy just follow the explains provided below:
 
 For Error Use:
 ```
+log.errorFile(data)
+```
+
+For Warning Use:
+```
+log.warningFile(data)
+```
+
+For Info Use:
+```
+log.infoFile(data)
+```
+
+Please be aware that data can be a string, number, object, or array.
+Since sometimes we need that data to be able to research an issue.
+
+### How to print to the console/screen
+Creating logs are easy just follow the explains provided below:
+
+For Error Use:
+```
 log.error(data)
 ```
 
@@ -94,7 +115,6 @@ log.info(data)
 
 Please be aware that data can be a string, number, object, or array.
 Since sometimes we need that data to be able to research an issue.
-
 
 ## Videos
 
