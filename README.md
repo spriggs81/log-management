@@ -3,10 +3,11 @@
 The Application was created to manage the logging process.  This application handles the logging to the console in different colors to easily tell the difference between informational messages, warning messages, and errors.
 
 The application has the ability to create log files in a `/.log` folder.  These files will have the type 'information, warning, and error` with the date it was created in the following format:
+```
 `error_log_MM-DD-YYYY`
 `warning-DD-YYYY`
 `error_log_MM-DD-YYYY`
-
+```
 The application has the ability to remove old log files.  Meaning you don't have to review the log folder to remove old files.  You can set the days you want to keep files in the folder and the application removes any older files daily.
 
 ## Getting Started
