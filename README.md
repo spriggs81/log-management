@@ -25,54 +25,42 @@ npm install log-management --save
 ```
 
 ### examples
-### Start App Without Auto File Remove Feature
-To start the application without the auto file remove feature you can do the following
-
-```
-const log = require('log-management')
-
-log.startWithoutAutoRemove({options})
-
-```
-The options available for the above settings are as follows
-
-The below option `stdMode` controls if the message that was passed along to create the log file is also printed in the console/screen.  
-
-If `true` then the messages are printed to the console/screen as well as the log file.  
-
-If `false` then no message is printed out to the console/screen, but still added to the log file.
-```
-const options = {
-    stdMode: boolean           
-}
-```
-
-### Start App with Auto Remove Feature
+### Setting the Configuration 
 To start the application with the auto file remove feature you can do the following
 
 ```
 const log = require('log-management')
 
-log.startWithAutoRemove({options})
+log.setConfig({options})
 
 ```
 The options available for the above settings are as follows:
 
-The below option `stdMode` controls if the message that was passed along to create the log file is also printed in the console/screen.  
+The option `stdMode` controls if the message that was passed along to create the log file is also printed in the console/screen.  
 
 If `true` then the messages are printed to the console/screen as well as the log file.  
 
-If `false` then no message is printed out to the console/screen, but still added to the log file.
-__
-The below option `logDays` controls how long the files are to remain in the `./log` folder.  If no number is entered the `default is 90 days`
+If `false`{default} then no message is printed out to the console/screen, but still added to the log file.
+<hr />
+
+The option `working` controls if the auto remove log files is turned on or off.  
+
+If `true` then the auto remove log files is turned `on` and the 'logDays` option should be set if not the default wil be set.  
+
+If `false` then the auto remove log files is turned `off`.
+<hr />
+
+The option `logDays` controls how long the files are to remain in the `./log` folder.  If no number is entered the `default is 90 days` if the `working` option is `true`.
+<hr />
 
 ```
 const options = {
-    stdMode: boolean,
-    logDays: number           
+    stdMode: boolean, // default false
+    working: boolean, // defaukt false
+    logDays: number   // default 0        
 }
 ```
-__
+<br>
 
 ### How to create logs
 Creating logs are easy just follow the explains provided below:
@@ -113,8 +101,7 @@ For Info Use:
 log.info(data)
 ```
 
-Please be aware that data can be a string, number, object, or array.
-Since sometimes we need that data to be able to research an issue.
+Please be aware that data can be a string, number, object, or array. The function will JSON Stringify anything not a string
 
 ## Videos
 
@@ -122,6 +109,4 @@ Since sometimes we need that data to be able to research an issue.
 
 ## Authors
 
-* **John Spriggs** - *Initial work* - [spriggs81](https://github.com/spriggs81)
-
-## Acknowledgments
+* **John S.** - *Initial work* - [spriggs81](https://github.com/spriggs81)
