@@ -1,4 +1,4 @@
-# Log Management
+# Log Management (Please Note: Still Testing)
 
 The Application was created to manage the logging process.  This application handles the logging to the console in different colors to easily tell the difference between informational messages, warning messages, and errors.
 
@@ -26,7 +26,7 @@ npm install log-management --save
 
 ### examples
 ### Setting the Configuration 
-To start the application with the auto file remove feature you can do the following
+To change the application's default settings use the following:
 
 ```
 const log = require('log-management')
@@ -47,16 +47,16 @@ The option `working` controls if the auto remove log files is turned on or off.
 
 If `true` then the auto remove log files is turned `on` and the 'logDays` option should be set if not the default wil be set.  
 
-If `false` then the auto remove log files is turned `off`.
+If `false`{default} then the auto remove log files is turned `off`.
 <hr />
 
-The option `logDays` controls how long the files are to remain in the `./log` folder.  If no number is entered the `default is 90 days` if the `working` option is `true`.
+The option `logDays` controls how long the files are to remain in the `./log` folder.  If no number is entered the `default is 90 days` if the `working` option is `true` and `0` if the `working` option is `false`.
 <hr />
 
 ```
 const options = {
     stdMode: boolean, // default false
-    working: boolean, // defaukt false
+    working: boolean, // default false
     logDays: number   // default 0        
 }
 ```
