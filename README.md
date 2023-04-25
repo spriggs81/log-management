@@ -1,4 +1,4 @@
-# Log Management (Please Note: Still Testing)
+# Log Management
 
 The Application was created to manage the logging process.  This application handles the logging to the console in different colors to easily tell the difference between informational messages, warning messages, and errors.
 
@@ -50,7 +50,7 @@ If `true` then the auto remove log files is turned `on` and the 'logDays` option
 If `false`{default} then the auto remove log files is turned `off`.
 <hr />
 
-The option `logDays` controls how long the files are to remain in the `./log` folder.  If no number is entered the `default is 90 days` if the `working` option is `true` and `0` if the `working` option is `false`.
+The option `logDays` controls how long the files are to remain in the `./log` folder.  If no number is entered the `default is 90 days` if the `working` option is `true` and default is `0` if the `working` option is `false`.
 <hr />
 
 ```
